@@ -3,7 +3,22 @@
 
 <form action="/books/create" method="POST">
 
-  <label for="title">Title:</label>
+  <div class="input-group mb-3">
+    <span for="title" class="input-group-text" id="inputGroup-sizing-default">Title:</span>
+    <input name="title" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <div class="input-group mb-3">
+    <span for="description" class="input-group-text" id="inputGroup-sizing-default">Description:</span>
+    <input name="description" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <div class="input-group mb-3">
+    <span for="author" class="input-group-text" id="inputGroup-sizing-default">Author:</span>
+    <input name="author" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  {{!-- <label for="title">Title:</label>
   <input type="text" name="title">
   <br>
   <label for="description">Description:</label>
@@ -11,7 +26,8 @@
   <br>
   <label for="author">Author:</label>
   <input type="text" name="author">
-  <br>
-  <button>Add</button>
+  <br> --}}
+
+  <button type="submit" class="btn btn-success">Add</button>
 
 </form>

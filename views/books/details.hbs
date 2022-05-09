@@ -3,4 +3,13 @@
   <h2>{{book.title}}</h2>
   <p>{{book.description}}</p>
   <p>{{book.author}}</p>
+
+  <a href="/books/{{book._id}}/edit">
+    <button class="btn btn-warning">Actualizar</button>
+  </a>
+
+  <form action="/books/{{book._id}}/delete" method="POST">
+    <button class="btn btn-danger">Borrar</button>
+  </form>
+
 </div>
