@@ -8,8 +8,12 @@ const bookSchema = new mongoose.Schema({
   description: {
     type: String,
   },
-  author: {
-    type: String,
+  author: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "author" // el nombre de nuestro modelo (collection)
+  }],
+  cover: {
+    type: String
   }
 })
 

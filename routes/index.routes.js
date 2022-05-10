@@ -10,5 +10,11 @@ router.get("/", (req, res, next) => {
 const bookRoutes = require("./book.routes.js")
 router.use("/books", bookRoutes)
 
+const authorRoutes = require("./author.routes.js")
+router.use("/authors", authorRoutes)
+
+const uploadRoutes = require("./upload.routes.js")
+router.use("/upload", uploadRoutes)
+
 
 module.exports = router;

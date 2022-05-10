@@ -13,10 +13,18 @@
     <input name="description" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div>
 
-  <div class="input-group mb-3">
+  {{!-- <div class="input-group mb-3">
     <span for="author" class="input-group-text" id="inputGroup-sizing-default">Author:</span>
     <input name="author" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-  </div>
+  </div> --}}
+
+  <select name="author" multiple="true">
+
+    {{#each allAuthors}}
+      <option value="{{this._id}}">{{this.name}}</option>
+    {{/each}}
+
+  </select>
 
   {{!-- <label for="title">Title:</label>
   <input type="text" name="title">
